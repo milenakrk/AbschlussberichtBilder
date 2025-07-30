@@ -1,0 +1,43 @@
+{% load static %}
+<html>
+<head>
+    <title>DineFind</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'neues_style.css' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'Logof.png' %}">
+</head>
+<body>
+        <div id="C1">
+            <img src="{% static 'Logo.jpg' %}" alt="Logo" class="Logo">
+            <h1>DineFind</h1>
+                
+        </div>
+    <div class="groß">
+        <div class="form-wrapper">
+    <div class="form-container">
+        <h2 class="h2acc">Login für registrierte Privatpersonen</h2>
+        <form id="anmeldeFormular" method="post" href="{% url 'login' %}">
+            {% csrf_token %}
+            <label class="labelacc" for="email">E-Mail-Adresse:</label>
+            <input class="inputacc" type="email" name="email" required><br><br>
+
+            <label class="labelacc" for="passwort">Passwort:</label>
+            <input class="inputacc" type="password" name="passwort" required><br><br>
+
+            <button class="buttonacc" type="submit">Einloggen</button>
+        </form>
+
+        <p class="anmeldung">Noch nicht registriert? <a href="{% url 'registr' %}">Hier registrieren</a></p>
+    </div>
+    </div>
+    </div>
+    <footer>
+        <p><a href="#C1">Zurück nach oben</a></p>
+        <i class="material-icons">copyright</i>Karkoschka; Renckly; Schüßler
+    </footer>
+</body>
+</html>

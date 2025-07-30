@@ -1,0 +1,106 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DineFind</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/neues_style.css" />
+    <link rel="icon" type="image/x-icon" href="{% static 'Logof.png' %}">
+</head>
+<body>
+    <div id="C1">
+        <img src="/static/Logo.jpg" alt="Logo" class="Logo">
+        <h1>DineFind</h1>
+    </div>
+    <div class="groß">
+        <div class="form-wrapper">
+        <!-- Formular Unternehmen -->
+        <!--    <div class="form-container">
+                <h2 class="h2acc">Registrieren als Restaurant:</h2>
+                  <form id="anmeldeFormularUnternehmen" method="post" action="/dinefind/reg">
+        
+                    <label class="label" for="restaurantname">Restaurantname:</label>
+                    <input class="input" type="text" id="restaurantname" required>
+            
+                    
+                    <label class="label" for="inhabername">Vor- und Nachname des Inhabers:</label>
+                    <input class="input" type="text" id="inhabername" required>
+            
+                    
+                    <label class="label" for="emailUnternehmen">E-Mail-Adresse:</label>
+                    <input class="input" type="email" id="emailUnternehmen" required>
+            
+                    
+                    <label class="label" for="telefonUnternehmen">Telefonnummer:</label>
+                    <input class="input" type="tel" id="telefonUnternehmen" required>
+            
+                    
+                    <label class="label" for="strasse">Straße und Hausnummer:</label>
+                    <input class="input" type="text" id="strasse" required>
+            
+                    
+                    <label class="label" for="plzort">PLZ und Ort:</label>
+                    <input class="input" type="text" id="plzort" required>
+            
+                    
+                    <button class="button" type="submit">Registrieren</button>
+                </form>
+            </div> -->
+                <!-- Formular Privatperson -->
+            <div class="form-container">
+                <h2 class="h2acc">Registrieren als Privatperson:</h2>
+                <form id="anmeldeFormular" method="post" action="/dinefind/registrieren">
+                    {% csrf_token %}
+                    <label class="labelacc" for="Vname">Vorname:</label>
+                    <input class="inputacc" type="text" id="Vname" name="vorname" required>
+
+                    <label class="labelacc" for="Nname">Nachname:</label>
+                    <input class="inputacc" type="text" id="Nname" name="nachname" required>
+
+                    <!--Email-Adresse anlegen-->
+                    <label class="labelacc" for="emailPrivat">E-Mail-Adresse:</label>
+                    <input class="inputacc" type="email" id="emailPrivat" name="email" required>
+            
+                    <!--Passwort festlegen-->
+                    <label class="labelacc" for="pass">Passwort setzen:</label>
+                    <input class="inputacc" type="password" id="pass" name="passwort" required
+                    pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[^A-Za-z\d]).{8,}$"
+                    title="Mindestens 8 Zeichen, mit Buchstaben, Zahlen und Sonderzeichen">
+
+
+                    <!--Passwort anzeigen-->
+                    <label>
+                    <input type="checkbox" onclick="togglePassword()"> Passwort anzeigen
+                    </label>
+            
+                    <!--Registrierung abschließen-->
+                    <button class="buttonacc" type="submit">Registrieren</button>
+                </form>
+                    <!--Anmeldung Verweis-->
+                <p class="anmeldung">Schon angemeldet? <a href="{% url 'login' %}">Hier anmelden</a></p>
+            </div>
+      </div>
+      <!--
+      <pre>
+        Hier können Sie sich als Restaurant bzw.
+        als Privatperson registrieren.
+      </pre>
+        -->
+    </div>
+    <footer>
+        <p><a href="#C1">Zurück nach oben</a></p>
+        <i class="material-icons">copyright</i>Karkoschka; Renckly; Schüßler
+    </footer>
+    <!--Script, Passwort anzeigen-->
+    <script>
+        function togglePassword() {
+          const passInput = document.getElementById("pass");
+          passInput.type = passInput.type === "password" ? "text" : "password";
+        }
+      </script>
+</body>
+</html>
