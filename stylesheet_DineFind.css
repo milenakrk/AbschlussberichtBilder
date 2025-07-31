@@ -1,0 +1,810 @@
+html,
+
+body {
+
+  width: 100vw;
+
+  height: 100vh;
+
+  overflow-x:hidden;
+
+}
+
+body {
+
+  background-color: #3E4751;
+
+  font-family: "Roboto Condensed", sans-serif;
+
+}
+
+h1{
+
+  display:inline;
+
+  font-family: "Roboto Condensed", sans-serif;
+
+  font-weight: normal;
+
+  font-style: normal;
+
+  font-size: 75px;
+
+  margin-left: 50px;
+
+  margin-right: 25px;
+
+  color: #DED1BE;
+
+}
+
+.Logo{
+
+  width:100px;
+
+  height:100px;
+
+  border-radius: 10px;
+
+}
+
+#Icondiv{
+
+  float: right;
+
+  margin-right:50px;
+
+  margin-top:50px;
+
+}
+
+.form{
+
+  margin-left: 8px;
+
+  display: inline-block;
+
+}
+
+.icons {
+
+  background-color: #DED1BE;
+
+  color: #661615;
+
+  border: 4px solid white;
+
+  border-radius: 5px;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition-duration: 0.4s;
+
+}
+
+.icons:hover {
+
+  border-color: #661615;
+
+}
+
+footer {
+
+  padding:20px;
+
+  font-family: "Roboto Condensed", sans-serif;
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-size: 20px;
+
+}
+
+.groß {
+
+  width: 100vw;
+
+  height: 90 vh;
+
+  display: flex;
+
+  justify-content: space-evenly;
+
+  align-items: center;
+
+}
+
+#mitte {
+
+  height: 65vh;
+
+  aspect-ratio: 2 / 3;
+
+  perspective-origin: center 50%;
+
+  position: relative;
+
+}
+
+.karte {
+
+  width: 100%;
+
+  height: 100%;
+
+  position: absolute;
+
+  border-radius: 20px;
+
+  border:5px solid white;
+
+}
+
+.karte img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-position: 50% 50%;
+
+}
+
+#like,
+
+#dislike {
+
+  border-radius: 25%;
+
+  border: 5px solid white;
+
+  background-color: #DED1BE;
+
+  position: relative;
+
+  padding: 50px;
+
+  cursor: pointer;
+
+  transition-duration: 0.4s;
+
+  color: #661615;
+
+}
+
+#like:hover,
+
+#dislike:hover {
+
+  border-color:#661615;
+
+}
+
+
+#LabelfilterKategorie {
+
+  color: white;
+
+  margin-bottom: 10px;
+
+}
+
+#filterKategorie {
+
+  background-color:#3E4751;
+
+  border-radius: 8px;
+
+  text-align: center;
+
+  color: #DED1BE
+
+}
+
+#filterKategorie:hover {
+
+  background-color: #661615;
+
+}
+
+
+.h2fav {
+
+  text-align: center;
+
+  margin-bottom: 30px;
+
+  color: white;
+
+  font-family: "Roboto Condensed", sans-serif;
+
+  font-size: 36px;
+
+  width: 100%;
+
+}
+
+.favoriten-container {
+
+  display: flex;
+
+  flex-direction: column;  
+
+  align-items: center;      
+
+  gap: 30px;
+
+  justify-content: center;
+
+  width: 100%; 
+
+  padding: 20px;
+
+}
+
+.favorit {
+
+  background-color: #DED1BE;
+
+  border-radius: 10px;
+
+  width: 80%; 
+
+  max-width: 600px;
+
+  padding: 20px;
+
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+  text-align: center;
+
+}
+
+.favorit:hover {
+
+  background-color: #661615;
+
+  color: white;
+
+}
+
+.favorit img {
+
+  width: 100%;
+
+  height: 300px;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+}
+
+.favorit p {
+
+  margin-top: 10px;
+
+  font-weight: bold;
+
+  color: #444;
+
+}
+
+.favseite {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center; 
+
+  padding: 20px;
+
+  background-color: #3E4751;
+
+  text-align: center;
+
+}
+
+.form-wrapper {
+
+  display: flex;
+
+  flex-direction: row;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  flex-wrap: nowrap; 
+
+  padding-top: 20px;
+
+  overflow-x: auto;   
+
+}
+
+.form-container {
+
+  background-color: #d1cbc1;
+
+  padding: 30px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  width: 100%;
+
+  max-width: 400px;
+
+}
+
+.h2acc{
+
+  text-align: center;
+
+  margin-bottom: 20px;
+
+  white-space: nowrap;
+
+}
+
+.labelacc {
+
+  display: block;
+
+  margin-top: 15px;
+
+}
+
+.anmeldung {
+
+  text-align: center;
+
+}
+
+
+.inputacc, .selectacc {
+
+  width: 100%;
+
+  padding: 10px;
+
+  margin-top: 5px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 5px;
+
+}
+
+.buttonacc {
+
+  width: 100%;
+
+  padding: 10px;
+
+  margin-top: 20px;
+
+  background-color: #292929;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+}
+
+.buttonacc:hover {
+
+  background-color: #292929;
+
+}
+
+.label {
+
+  display: block;
+
+  margin-top: 15px;
+
+}
+
+.input {
+
+  width: 100%;
+
+  padding: 10px;
+
+  margin-top: 5px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 5px;
+
+}
+
+.button {
+
+  width: 100%;
+
+  padding: 10px;
+
+  margin-top: 20px;
+
+  background-color: #292929;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+}
+
+.button:hover {
+
+  background-color: #444;
+
+}
+
+
+pre {
+
+	text-align:center;
+
+	color: white;
+
+	font-family: "Roboto Condensed", sans-serif;
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-size: 20px;
+
+}
+
+
+.review {
+
+  width: 100vw;
+
+  height: 100vh;
+
+  overflow-x: hidden;
+
+  background-color: #3E4751;
+
+  font-family: "Roboto Condensed", sans-serif;
+
+  display: flex;               
+
+  justify-content: center;     
+
+  align-items: center; 
+
+}
+
+.form-container1 {
+
+  background-color: #DED1BE;
+
+  padding: 30px;
+
+  margin-top: -40px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  width: 500px; 
+
+}
+
+.form-container1 h1 {
+
+  font-size: 24px;
+
+  margin-bottom: 50px;
+
+  text-align: center;
+
+  color: #333;
+
+}
+
+.form-container1 p {
+
+  font-size: 14px;
+
+  text-align: center;
+
+  color: #666;
+
+  margin-bottom: 50px;
+
+
+}
+
+.review form label {
+
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #555;
+
+  font-weight: bold;
+
+  margin-top: 38px;
+
+}
+
+.review form select,
+
+.review form textarea {
+
+  width: 100%;
+
+  padding: 10px;
+
+  margin-bottom: 15px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+
+}
+
+.review form button {
+
+  width: 100%;
+
+  padding: 10px;
+
+  background-color: #661615;
+
+  color: white;
+
+  font-size: 16px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+
+}
+
+.review form button:hover {
+
+  background-color: #3E4751;
+
+}
+
+.card {
+
+  color: black;
+
+  background-color: #DED1BE;
+
+  width: 340px;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+
+  animation: fadeIn 1s ease-in-out;
+
+}
+
+
+.card-images {
+
+  display: flex;
+
+  overflow-x: scroll;
+
+  scroll-snap-type: x mandatory;
+
+}
+
+
+.card-images img {
+
+  width: 340px;
+
+  height: 220px;
+
+  object-fit: cover;
+
+  scroll-snap-align: start;
+
+}
+
+
+.card-content {
+
+  padding: 26px;
+
+}
+
+
+.restaurant-name {
+
+  font-size: 24px;
+
+  margin: 0 0 8px;
+
+  color: #661615;
+
+
+}
+
+
+.address, .price-range {
+
+  font-size: 14px;
+
+  margin: 4px 0;
+
+  color: #555;
+
+}
+
+
+.about, .favorites, .cta {
+
+  margin-top: 16px;
+
+}
+
+
+.about h2,
+
+.favorites h2 {
+
+  font-size: 16px;
+
+  margin-bottom: 8px;
+
+}
+
+
+ul {
+
+  list-style-type: none;
+
+  padding: 0;
+
+}
+
+
+ul li {
+
+  margin-bottom: 6px;
+
+}
+
+
+.cta {
+
+  background-color: #ffe8e8;
+
+  border-left: 4px solid #661615; 
+
+  padding: 10px;
+
+  margin-top: 20px;
+
+  border-radius: 4px;
+
+}
+
+
+@keyframes fadeIn {
+
+  from { opacity: 0; transform: translateY(10px); }
+
+  to { opacity: 1; transform: translateY(0); }
+
+}
+
+@media (max-width: 768px) {
+
+  h1 {
+
+    font-size: 36px;
+
+    margin-left: 10px;
+
+    margin-right: 10px;
+
+  }
+
+  .Logo {
+
+    width: 60px;
+
+    height: 60px;
+
+  }
+
+  #Icondiv {
+
+    float: none;
+
+    margin: 10px auto;
+
+    text-align: center;
+
+  }
+
+  .form {
+
+    margin: 5px;
+
+  }
+
+  .favseite {
+
+    padding: 10px;
+
+  }
+
+  .favorit {
+
+    width: 95%; 
+
+  }
+
+  .favorit img {
+
+    height: 200px;
+
+  }
+
+  .form-container1 {
+
+    width: 90%;
+
+    padding: 20px;
+
+  }
+
+  .form-wrapper {
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    justify-content: center;
+
+  }
+
+  footer {
+
+    font-size: 16px;
+
+    text-align: center;
+
+  }
+
+}
+ 
